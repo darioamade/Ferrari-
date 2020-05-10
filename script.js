@@ -8,7 +8,7 @@ new hoverEffect({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     position: 'center',
-    displacementImage: "./css/img/strip.png"
+    displacementImage: "./css/img/strip2.png"
     
 });
 
@@ -43,11 +43,16 @@ slider.addEventListener('mousedown', (e) => {
     if(!isDown) return; // will stop the function to running
     e.preventDefault();
     const x = e.pageX -slider.offsetLeft;
-    const walk = (x - startX) * 3;
+    const walk = (x - startX) * 4;
     console.log(walk);
     slider.scrollLeft = scrollLeft - walk;
 
 
     });
+
+
+  
+
+
 
 
