@@ -251,13 +251,11 @@ html {
 }
 
 
-
-
-
 .plan-p{
   font-family: Sans-serif;
   text-transform:initial;
-  font-size:1.4rem;
+  font-size:1.4rem; 
+   /* font-size:calc(1.4rem + 1vw); */
   font-weight: 300;
   letter-spacing: 2px;
   line-height: 2;
@@ -420,10 +418,12 @@ header {
   font-family: 'monument extended';
   text-transform:uppercase;
   letter-spacing: 1px;
-  font-size: 1.8rem;
+  font-size:calc(1.8rem + 1.8vw);
   font-weight:400;
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.2 ease;
 }
 
 
@@ -1305,17 +1305,25 @@ cursor: pointer;
   padding: 2rem;
 }
 
-ul {
+@media screen and (max-width: 768px) {
+  .nav-down  {
+    height: 30rem;
+    margin: 2rem auto;
+  }
+}
+
+.nav-down  ul {
   list-style: none;
   color: #fff;
 }
 
-ul li  {
+.nav-down  ul li  {
   text-align: center;
   padding: 2px;
   font-family: 'Roboto', sans-serif;
   text-transform:initial;
   font-size: 1.2rem;
+  font-size:calc(1.2 + 1.5vw);
   font-weight:200;
   letter-spacing: 2px;
   color: rgb(255, 255, 255);
