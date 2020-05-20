@@ -94,6 +94,15 @@ html {
   grid-template-rows: 8vh 100vh 80vh 50vw 15vh 70vw 40vw 80vw 85vh  12vh 70vh 40vh 40vh 50vh;
   grid-template-columns: [full-start] minmax(6rem,1fr) [center-start]repeat(8,[col-start] minmax(min-content, 14em)[col-end])[center-end] minmax(6rem,1fr)[full-end];
  }
+ @media only screen 
+ and (min-device-width : 360px) 
+ and (max-device-width : 1048px) 
+ and (orientation : landscape)  {
+   .container {
+    grid-template-rows: 10vh 100vh min-content 60vh 15vh 70vh 60vh min-content min-content  12vh 70vh min-content min-content min-content;
+ 
+   }
+ }
  @media screen and (max-width: 168rem) {
   .container {
     grid-template-rows: 8vh 100vh 80vh min-content 15vh 60vw 40vw min-content 85vh  12vh 70vh 40vh 40vh 50vh;
@@ -103,32 +112,32 @@ html {
 
  @media screen and (max-width: 1444px) {
   .container {
-    grid-template-rows: 8vh 100vh 80vh 90vw 15vh 70vw 50vw min-content 85vh  12vh 70vh 40vh 40vh 50vh;
+    grid-template-rows: 8vh 100vh 80vh 90vw 15vh 70vw 50vw min-content 85vh  12vh 70vh min-content min-content 50vh;
  
   }
 }
  @media screen and (max-width: 963px) {
   .container {
-    grid-template-rows: 8vh 100vh 90vh 80vw 15vh 70vw 50vw min-content 85vh  12vh 70vh 40vh 40vh 50vh;
+    grid-template-rows: 8vh 100vh 90vh 80vw 15vh 70vw 50vw min-content 85vh  12vh 70vh min-content min-content 50vh;
  
   }
 }
 @media screen and (max-width: 768px) {
   .container {
-    grid-template-rows: 8vh 100vh 90vh min-content 15vh 90vw 80vh min-content min-content  12vh 70vh min-content min-content 50vh;
+    grid-template-rows: 8vh 100vh 90vh min-content 15vh 90vw 80vh min-content min-content  12vh 70vh min-content min-content min-content;
  
   }
 }
 
 @media screen and (max-width: 500px) {
   .container {
-    grid-template-rows: 6vh 100vh 100vh min-content 5vh min-content 80vh 100vh 80vh  12vh 70vh min-content min-content 60vh;
+    grid-template-rows: 6vh 100vh 100vh min-content 5vh min-content 80vh min-content 80vh  12vh 70vh min-content min-content min-content;
   }
 }
 
 @media screen and (max-width: 375px) {
   .container {
-    grid-template-rows: 6vh 100vh 100vh min-content 5vh min-content 80vh 70vh 80vh  12vh 70vh min-content min-content 60vh;
+    grid-template-rows: 6vh 100vh 100vh min-content 5vh min-content 80vh min-content 70vh  12vh 70vh min-content min-content min-content;
   }
 }
 
@@ -370,16 +379,22 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
+
 }
 
 
 @media screen and (max-width: 1224px) {
   .nav-now-x {
     grid-column: 1 / span 1;
+    padding: 0rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.ttt-menu li,
+
+
 .ttt li {
   width:14rem;
   float: left;
@@ -395,8 +410,21 @@ header {
   line-height: 40px;
   cursor: pointer;
   transition: all 0.2 ease;
+
 }
 
+.ttt-menu  li {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'monument extended';
+  text-transform:uppercase;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight:400;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+}
 
 
 .ttt-menu li a:hover {
@@ -485,12 +513,6 @@ ul li a:hover {
 
 }
 .distortion {
-
-  /*background-image: url(/css/img/img-12.jpg);
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-  */
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -501,11 +523,13 @@ ul li a:hover {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+
 }
 
 
 .txt {
   position: relative;
+
 }
 .wrapper {
   position: absolute;
@@ -517,7 +541,24 @@ ul li a:hover {
   -moz-transform: translate(-50%, -5%);
   -ms-transform: translate(-50%, -5%);
   -o-transform: translate(-50%, -5%);
+
 }
+
+@media screen and (max-width: 425px) {
+  .wrapper{
+    width: 95vw;
+  }
+}
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 1048px) 
+and (orientation : landscape) {
+  .wrapper{
+    width: 95vw;
+  }
+}
+
+
 .circle{
   position: absolute;
   top: 5%;
@@ -527,6 +568,7 @@ ul li a:hover {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  display: none;
 }
 
 .search__icon {
@@ -593,6 +635,15 @@ ul li a:hover {
   padding:  0 14rem;
 
 }
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 1048px) 
+and (orientation : landscape)  {
+  .session-2,
+  .session-5 {
+    padding:  0 4rem;
+  }
+}
 
 @media screen and (max-width: 524px) {
   .session-2 {
@@ -627,8 +678,6 @@ ul li a:hover {
   flex-direction:row;
   justify-content:center;
   align-content:center;
-
- 
 }
 
 .search__icon-3  {
@@ -708,8 +757,6 @@ ul li a:hover {
   -moz-transform: scale(.98);
   -ms-transform: scale(.98);
   -o-transform: scale(.98);
-
-
 }
 
 .item {
@@ -737,26 +784,21 @@ ul li a:hover {
   width: 100%;
 }
 
-
 .img {
- /* width: 800px;
-  height: 800px;
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-  object-fit: cover;*/
   opacity: 0.9;
   width: 800px;
   height: 800px;
-
   object-fit: cover;
+}
 
-
+@media screen and (max-width: 768px) {
+  .img {
+    opacity: 1;
+  }
 }
 
 .img:hover {
 	opacity: 1;
-
 }
 
 .search__icon-3 {
@@ -834,7 +876,7 @@ ul li a:hover {
 }
 @media screen and (max-width: 610px) {
   .personal  {
-    grid-column: 1 / span 7;
+    grid-column: 1 / span 8;
     grid-row: 2 / span 4;
   }
 }
@@ -995,7 +1037,7 @@ ul li a:hover {
 }
 @media screen and (max-width: 504px) {
   .carousel-container{
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 
@@ -1008,6 +1050,7 @@ ul li a:hover {
   height: 350px;
   flex: 0 0 70%;
 }
+/*
 @media screen and (max-width: 726px) {
   .carousel-slide {
     width: 400px;
@@ -1030,7 +1073,7 @@ ul li a:hover {
     height: 250px;
   }
 }
-
+*/
 @media screen and (max-width: 320px) {
   menu-1 {
     max-width: 480px;
@@ -1118,7 +1161,6 @@ cursor: pointer;
     grid-column: 1 / span 8;
     grid-row: 1 / span 1;
     padding: 1.5rem;
-    border: 1px solid #ddd;
   }
 }
 
@@ -1159,12 +1201,13 @@ cursor: pointer;
   justify-content: flex-start;
   align-items:center;
   padding:0 8rem;
+ 
 }
 
 @media screen and (max-width: 670px) {
   .arrow-11 {
     grid-column: 1 / span 8;
-    grid-row: 2 / span 1;
+    grid-row: 12 / span 1;
     justify-content: center;
   }
 }
