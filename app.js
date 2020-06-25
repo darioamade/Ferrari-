@@ -1,4 +1,4 @@
-
+/* 
 const carouselSlide = document.querySelector('.carousel-slide');
 const carouselImages = document.querySelectorAll('.carousel-slide img');
 
@@ -49,4 +49,31 @@ carouselSlide.addEventListener('transitionend',() => {
       
    }   
 
+}); */
+
+let link1 = document.querySelector("#link-1");
+let link2 = document.querySelector("#link-2");
+let link3 = document.querySelector("#link-3");
+let link4 = document.querySelector("#link-4");
+let link5 = document.querySelector("#link-5");
+let link6 = document.querySelector("#link-6");
+let link7 = document.querySelector("#link-7");
+let link8 = document.querySelector("#link-8");
+let link9 = document.querySelector("#link-9");
+let link10 = document.querySelector("#link-10");
+let link11 = document.querySelector("#link-11");
+
+link1.addEventListener("click", () => {
+document.showcar.backgroundImage =  "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')";
+
+ /*  document.body.showcar.style.backgroundImage =
+     "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')"; */
+});
+link2.addEventListener("click", () => {
+  document.showcar.style.backgroundImage =
+    "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')";
+});
+link3.addEventListener("click", () => {
+  document.showcar.style.backgroundImage =
+    "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')";
 });
