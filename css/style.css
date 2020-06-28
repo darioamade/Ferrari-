@@ -1176,6 +1176,7 @@ ul li a:hover {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(8, 1fr);
+  cursor: pointer;
 }
 
 .pic1 {
