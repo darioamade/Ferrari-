@@ -149,6 +149,16 @@ button:focus {
   /* logo menu size */
 }
 
+.ferrari-2 {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  transform: translate(-2%, 2%);
+  width: 14rem;
+  height: 14rem;
+  cursor: pointer;
+}
+
 .car-link {
   width: 100%;
   flex: 0 0 80%;
@@ -359,4 +369,22 @@ button:focus {
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0%;
   transform: rotate(-135deg);
+}
+
+/*----------------------------------------------------------------*/
+/*-------------------------------TEAM------------------------------*/
+/*----------------------------------------------------------------*/
+.team {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/css/img/50.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,16 +1,16 @@
 :root {
   --color-primary-white: #fff;
   --color-primary: #d4d8d8;
-  --color-secondary: #0D0D0D;
+  --color-secondary: #0d0d0d;
   --color-grey-light: #0e0d0d31;
   --color-grey-light-2: #737373;
   --color-grey-light-3: #404040;
   --color-grey-dark-1: rgb(0, 0, 0);
   --color-grey-dark-2: #777;
   --color-grey-dark-3: rgb(44, 41, 41);
-  --shadow-dark: 0 5rem 6rem rgba(0, 0, 0, .4);
+  --shadow-dark: 0 5rem 6rem rgba(0, 0, 0, 0.4);
   --shadow-medium: 0 2rem 5rem rgba(0, 0, 0, 0.185);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .16);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.16);
   --line: 1px solid var(--color-grey-light-2);
 }
 
@@ -21,7 +21,9 @@
   outline: none;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -43,8 +45,8 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Playfair Display', serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark-1);
@@ -88,7 +90,12 @@ body {
 .container {
   display: grid;
   grid-template-rows: 8vh 100vh 80vh 50vw 15vh 70vw 40vw 80vw 85vh 12vh 70vh 40vh 40vh 50vh;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start]repeat(8, [col-start] minmax(min-content, 14em)[col-end])[center-end] minmax(6rem, 1fr)[full-end];
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start]repeat(
+      8,
+      [col-start] minmax(min-content, 14em) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 1048px) and (orientation: landscape) {
@@ -138,7 +145,7 @@ body {
 /*--------------------------------TYPOGRAPHY--------------------------------*/
 
 .heading-1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 4.5rem;
   font-weight: 500;
   line-height: 1;
@@ -153,7 +160,7 @@ body {
 }
 
 .heading-2 {
-  font-family: 'monument extended', sans-serif;
+  font-family: "monument extended", sans-serif;
   font-size: 2.2rem;
   font-weight: 400;
   line-height: 1.5;
@@ -183,7 +190,7 @@ body {
 }
 
 .heading-3 {
-  font-family: 'monument extended', Sans-serif;
+  font-family: "monument extended", Sans-serif;
   text-transform: initial;
   font-size: 1.5rem;
   font-weight: 300;
@@ -194,7 +201,7 @@ body {
 }
 
 .heading-4 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 600;
@@ -227,7 +234,7 @@ body {
 }
 
 .arrow-1 .heading-6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 400;
@@ -252,7 +259,7 @@ body {
   background-color: transparent;
   padding: 1rem 5rem;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
   letter-spacing: 1px;
   color: var(--color-grey-dark-2);
@@ -260,7 +267,7 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 0;
-  transition: all .2s;
+  transition: all 0.2s;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.2s;
   cursor: pointer;
@@ -370,7 +377,7 @@ header {
   float: left;
   text-align: center;
   padding: 8px;
-  font-family: 'monument extended';
+  font-family: "monument extended";
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.4rem;
@@ -386,7 +393,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: 'monument extended';
+  font-family: "monument extended";
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: calc(1.8rem + 1.8vw);
@@ -535,7 +542,7 @@ ul li a:hover {
   background-color: #f7f5f500;
   width: 10rem;
   height: 1.5px;
-  border-left: .5px solid rgba(37, 36, 36, 0);
+  border-left: 0.5px solid rgba(37, 36, 36, 0);
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -590,7 +597,8 @@ ul li a:hover {
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 1048px) and (orientation: landscape) {
-  .session-2, .session-5 {
+  .session-2,
+  .session-5 {
     padding: 0 4rem;
   }
 }
@@ -633,7 +641,7 @@ ul li a:hover {
   fill: #fff;
   cursor: pointer;
   border-radius: 50%;
-  border: .5px solid #fff;
+  border: 0.5px solid #fff;
 }
 
 .search__icon-2 {
@@ -655,7 +663,7 @@ ul li a:hover {
 }
 
 .search__icon-2:hover {
-  border: .5px solid var(--color-grey-dark-2);
+  border: 0.5px solid var(--color-grey-dark-2);
 }
 
 @keyframes border {
@@ -682,16 +690,16 @@ ul li a:hover {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: none;
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
-  transform: scale(.98);
-  -webkit-transform: scale(.98);
-  -moz-transform: scale(.98);
-  -ms-transform: scale(.98);
-  -o-transform: scale(.98);
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  -o-transform: scale(0.98);
 }
 
 .item {
@@ -712,7 +720,8 @@ ul li a:hover {
   -o-transform: scale(1);
 }
 
-.item1, .item2 {
+.item1,
+.item2 {
   height: auto;
   width: 100%;
 }
@@ -751,7 +760,6 @@ ul li a:hover {
   flex: 1;
   justify-content: center;
   align-items: center;
-  ;
 }
 
 .search__icon-right {
@@ -763,16 +771,21 @@ ul li a:hover {
 }
 
 @keyframes rotate {
-  10%, 90% {
+  10%,
+  90% {
     transform: translate3d(-80px, 0, 0);
   }
-  20%, 80% {
+  20%,
+  80% {
     transform: translate3d(20px, 0, 0);
   }
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate3d(-40px, 0, 0);
   }
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(80px, 0, 0);
   }
 }
@@ -1044,7 +1057,7 @@ ul li a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transform: translateZ(0) scale(1.0, 1.0);
+  transform: translateZ(0) scale(1, 1);
   display: grid;
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(8, 1fr);
@@ -1053,11 +1066,11 @@ ul li a:hover {
 .session-7:hover {
   animation: increase 60s linear 10ms infinite;
   -webkit-animation: increase 60s linear 10ms infinite;
-  transition: all .2s ease-in-out;
-  -webkit-transition: all .2s eas;
-  -moz-transition: all .2s eas;
-  -ms-transition: all .2s eas;
-  -o-transition: all .2s eas;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s eas;
+  -moz-transition: all 0.2s eas;
+  -ms-transition: all 0.2s eas;
+  -o-transition: all 0.2s eas;
 }
 
 @keyframes increase {
@@ -1087,8 +1100,9 @@ ul li a:hover {
   }
 }
 
-.heading-12, .heading-13 {
-  font-family: 'Playfair Display', serif;
+.heading-12,
+.heading-13 {
+  font-family: "Playfair Display", serif;
   font-size: 4.5rem;
   font-weight: 500;
   line-height: 1;
@@ -1099,13 +1113,13 @@ ul li a:hover {
 }
 
 .heading-13 {
-  font-family: 'monument extended', sans-serif;
+  font-family: "monument extended", sans-serif;
   font-size: 4.5rem;
   font-weight: 600;
 }
 
 #whitea {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: 1px;
@@ -1131,7 +1145,7 @@ ul li a:hover {
 }
 
 .arrow-11 .heading-6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 400;
@@ -1159,7 +1173,7 @@ ul li a:hover {
 }
 
 .heading-55 {
-  font-family: 'monument extended', sans-serif;
+  font-family: "monument extended", sans-serif;
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 400;
@@ -1190,16 +1204,6 @@ ul li a:hover {
   justify-content: center;
   align-items: flex-end;
 }
-
-/*
-.pic2 {
-  background-image: url(/css/img/img-8.jpg);
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-  grid-column:  5/ span 4;
-  grid-row: 1 / span 10;
-} */
 
 /*----------------------------------------------------------------*/
 
@@ -1238,7 +1242,7 @@ ul li a:hover {
 .nav-down ul li {
   text-align: center;
   padding: 2px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: initial;
   font-size: 1.2rem;
   font-size: calc(1.2 + 1.5vw);
@@ -1306,4 +1310,4 @@ hr {
   margin: 3rem 0;
 }
 
-/*----------------------------------------------------------------*/
+
