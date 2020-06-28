@@ -795,7 +795,8 @@ ul li a:hover {
 
 .session-4 {
   grid-column: full-start / full-end;
-  background-image: url(/css/img//22.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(/css/img/31.jpg);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
