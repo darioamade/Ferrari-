@@ -81,6 +81,18 @@ body {
   width: 8rem;
   height: 8rem;
 }
+
+.ferrari {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  width:14rem;
+  height: 14rem;
+}
+
+
+
 .car-link {
   width: 100%;
   flex: 0 0 80%;
