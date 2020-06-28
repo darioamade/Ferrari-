@@ -51,29 +51,90 @@ carouselSlide.addEventListener('transitionend',() => {
 
 }); */
 
-let link1 = document.querySelector("#link-1");
-let link2 = document.querySelector("#link-2");
-let link3 = document.querySelector("#link-3");
-let link4 = document.querySelector("#link-4");
-let link5 = document.querySelector("#link-5");
-let link6 = document.querySelector("#link-6");
-let link7 = document.querySelector("#link-7");
-let link8 = document.querySelector("#link-8");
-let link9 = document.querySelector("#link-9");
-let link10 = document.querySelector("#link-10");
-let link11 = document.querySelector("#link-11");
+let btn1 = document.querySelector("#btn-1");
+let btn2 = document.querySelector("#btn-2");
+let btn3 = document.querySelector("#btn-3");
+let btn4 = document.querySelector("#btn-4");
+let btn5 = document.querySelector("#btn-5");
+let btn6 = document.querySelector("#btn-6");
+let btn7 = document.querySelector("#btn-7");
+let btn8 = document.querySelector("#btn-8");
+let btn9 = document.querySelector("#btn-9");
+let btn10 = document.querySelector("#btn-10");
+let btn11 = document.querySelector("#btn-11");
+let showCar = document.querySelector(".showcaronebyone");
 
-link1.addEventListener("click", () => {
-document.showcar.backgroundImage =  "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')";
+btn1.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/29.jpg')";
+});
+btn2.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/30.jpg')";
+});
+btn3.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/img-11.jpg')";
+});
+btn4.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/32.jpg')";
+});
+btn5.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/34.jpg')";
+});
+btn6.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/35.jpg')";
+});
+btn7.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/36.jpg')";
+});
+btn8.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/37.jpg')";
+});
+btn9.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/38.jpg')";
+});
+btn10.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/39.jpg')";
+});
+btn11.addEventListener("click", () => {
+  showCar.style.backgroundImage = "url('/css/img/29.jpg')";
+});
 
- /*  document.body.showcar.style.backgroundImage =
+
+// btn1.addEventListener("click", () => {
+//   document.body.showcar.backgroundImage = "url('/css/img/29.jpg')";
+/* 
+// });
+btn2.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/30.jpg')";
+});
+
+btn3.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/31.jpg')";
+});
+btn4.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/32.jpg')";
+});
+btn5.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/34.jpg')";
+});
+btn6.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/35.jpg')";
+});
+btn7.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/36.jpg')";
+});
+btn8.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/37.jpg')";
+});
+btn9.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/38.jpg')";
+});
+btn10.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/39.jpg')";
+});
+btn11.addEventListener("click", () => {
+  document.body.style.backgroundImage = "url('/css/img/31.jpg')";
+});  */
+
+/*  document.bodydocument.bodydocument.body.style.backgroundImage =
      "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')"; */
-});
-link2.addEventListener("click", () => {
-  document.showcar.style.backgroundImage =
-    "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')";
-});
-link3.addEventListener("click", () => {
-  document.showcar.style.backgroundImage =
-    "url('https://i.ytimg.com/vi/QNJ35ieLHos/hqdefault.jpg')";
-});
+ 

@@ -1,3 +1,4 @@
+@import url(/css/style.css);
 :root {
   --color-primary-white: #fff;
   --color-primary: #d4d8d8;
@@ -21,9 +22,7 @@
   outline: none;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
@@ -31,6 +30,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
 @media screen and (max-width: 1152px) {
   html {
     font-size: 55%;
@@ -49,16 +49,55 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark-1);
-  background-color: #fff;
   overflow-x: hidden;
+}
+
+div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+button {
+  padding: .5rem 0rem;
+  color: #d4d2d2;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: Lato, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.35;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: all .1s;
+  margin: .2rem;
+}
+
+button:hover, button:active {
+  color: #212020;
+}
+
+/* button:hover,
+ button:active {
+  color: #212020;
+} */
+
+button:focus {
+  color: #212020;
 }
 
 .container {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  position: relative;
 }
 
 .car-links {
@@ -70,16 +109,38 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .car-links {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .arrow {
+    display: none;
+  }
+}
+
 .logo-area {
   width: 100%;
   flex: 0 0 20%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem 1rem;
 }
 
 .logo {
   width: 8rem;
   height: 8rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 18rem;
+    height: 18rem;
+  }
 }
 
 .ferrari {
@@ -87,11 +148,10 @@ body {
   top: 5%;
   left: 50%;
   transform: translate(-50%, -5%);
-  width:14rem;
+  width: 14rem;
   height: 14rem;
+  /* logo menu size */
 }
-
-
 
 .car-link {
   width: 100%;
@@ -103,41 +163,34 @@ body {
   padding: 1rem;
 }
 
-.car-link li {
-  margin-bottom: 1.5rem;
-}
-
-.car-link-item a {
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  text-transform: capitalize;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: rgb(119, 118, 118);
-}
-
-.car-link-item a:hover {
-  color: rgb(2, 2, 2);
-}
-
-.car-link-item li a {
-  text-transform: none;
-}
-
-.car-link-item li a :hover,
-.car-link-item li a :active {
-    color: rgb(2, 2, 2);
-  }
 .showcar {
-  background-image: url(/css/img/img-6.jpg);
+  /* background-image: url(/css/img/37.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover; */
   flex: 0 0 80%;
   height: 100%;
   width: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .showcar {
+    display: none;
+  }
+}
+
+.showcaronebyone {
+  background-image: url(/css/img/37.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .navigation__checkbox {
@@ -157,12 +210,14 @@ body {
   text-align: center;
   cursor: pointer;
 }
+
 @media only screen and (max-width: 56.25em) {
   .navigation__button {
     top: 4rem;
     right: 4rem;
   }
 }
+
 @media only screen and (max-width: 37.5em) {
   .navigation__button {
     top: 3rem;
@@ -221,8 +276,7 @@ body {
   margin: 1rem;
 }
 
-.navigation__link:link,
-.navigation__link:visited {
+.navigation__link:link, .navigation__link:visited {
   display: inline-block;
   font-size: 3rem;
   font-weight: 300;
@@ -230,34 +284,27 @@ body {
   color: rgb(41, 40, 40);
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    #fff 50%
-  );
+  background-image: linear-gradient( 120deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 230%;
   transition: all 0.4s;
 }
 
-.navigation__link:link span,
-.navigation__link:visited span {
+.navigation__link:link span, .navigation__link:visited span {
   margin-right: 1.5rem;
   display: inline-block;
 }
 
-.navigation__link:hover,
-.navigation__link:active {
+.navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #fafafa;
   transform: translateX(1rem);
 }
 
-.navigation__checkbox:checked ~ .navigation__background {
+.navigation__checkbox:checked~.navigation__background {
   transform: scale(80);
 }
 
-.navigation__checkbox:checked ~ .navigation__nav {
+.navigation__checkbox:checked~.navigation__nav {
   opacity: 1;
   width: 100%;
 }
@@ -267,17 +314,14 @@ body {
   margin-top: 3.5rem;
 }
 
-.navigation__icon,
-.navigation__icon::before,
-.navigation__icon::after {
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
   width: 3rem;
   height: 2px;
   background-color: #333;
   display: inline-block;
 }
 
-.navigation__icon::before,
-.navigation__icon::after {
+.navigation__icon::before, .navigation__icon::after {
   content: "";
   position: absolute;
   left: 0;
@@ -300,16 +344,16 @@ body {
   top: 1rem;
 }
 
-.navigation__checkbox:checked + .navigation__button .navigation__icon {
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
   background-color: transparent;
 }
 
-.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
   top: 0%;
   transform: rotate(135deg);
 }
 
-.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
   top: 0%;
   transform: rotate(-135deg);
 }
