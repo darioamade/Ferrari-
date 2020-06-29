@@ -14,8 +14,6 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -139,9 +137,10 @@ body {
 
 @media screen and (max-width: 375px) {
   .container {
-    grid-template-rows: 10vh 90vh 100vh min-content 5vh min-content 80vh min-content 70vh 12vh 70vh min-content min-content min-content;
+    grid-template-rows: 5vh 100vh 100vh min-content 5vh min-content 80vh min-content 70vh 12vh 70vh min-content min-content min-content;
   }
 }
+
 
 /*--------------------------------------------------------------
  animation-delay: 5s;
@@ -350,9 +349,9 @@ button:focus {
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: 1fr;
   padding: 0 2rem;
-  border: 2px solid #ddd;
   overflow: hidden;
 }
+
 
 .logo-area {
   grid-column: 7 / span 2;
@@ -370,9 +369,15 @@ button:focus {
   }
 }
 
-.logo {
-  height: 4rem;
-  border: 2px solid #ddd;
+.logo-letter {
+  width: 14rem;
+  height: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .logo-letter {
+    width: 18rem;
+    height: 8rem;
+  }
 }
 
 .nav-now-x {
@@ -726,6 +731,13 @@ ul li a:hover {
   justify-content: center;
 }
 
+@media screen and (max-width:768px){
+  .item {
+    width: 95%;
+    height: 440px;
+  }
+}
+
 .items {
   cursor: grabbing;
   cursor: -webkit-grabbing;
@@ -742,6 +754,13 @@ ul li a:hover {
   width: 100%;
 }
 
+@media screen and (max-width:768px){
+  .item {
+    width: 95%;
+    height: 440px;
+  }
+}
+
 .img {
   opacity: 0.9;
   width: 800px;
@@ -752,6 +771,8 @@ ul li a:hover {
 @media screen and (max-width: 768px) {
   .img {
     opacity: 1;
+    height: 440px;
+    width: 440px;
   }
 }
 
@@ -810,7 +831,7 @@ ul li a:hover {
 
 .session-4 {
   grid-column: full-start / full-end;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(/css/img/31.jpg);
 
   background-repeat: no-repeat;
@@ -824,7 +845,7 @@ ul li a:hover {
 .personal {
   grid-column: 1 / span 4;
   grid-row: 1 / span 4;
-  padding: 0 4rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1042,6 +1063,10 @@ ul li a:hover {
   -o-border-radius: none;
 }
 
+.bullets {
+  padding:rem;
+
+}
 /*----------------------------------------------------------------*/
 
 .session-7 {
@@ -1436,7 +1461,7 @@ hr {
 
 .navigation__icon {
   position: relative;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 .navigation__icon,
 .navigation__icon::before,
@@ -1452,8 +1477,6 @@ hr {
   background-color: #fff;
   display: inline-block;
 }
-
-
 
 .navigation__icon::before,
 .navigation__icon::after {

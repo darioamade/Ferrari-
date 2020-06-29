@@ -1,10 +1,3 @@
-window.addEventListener('load', () => {
-const preload = document.querySelector('.preload');
-preload.classList.add('preload-finish');
-});
-
-
-
 
 let btn1 = document.querySelector("#btn-1");
 let btn2 = document.querySelector("#btn-2");
