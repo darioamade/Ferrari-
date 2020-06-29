@@ -131,7 +131,7 @@ body {
 
 @media screen and (max-width: 500px) {
   .container {
-    grid-template-rows: 10vh 90vh 100vh min-content 5vh min-content 80vh min-content 80vh 12vh 70vh min-content min-content min-content;
+    grid-template-rows: 10vh 100vh 100vh min-content 5vh min-content 80vh min-content 80vh 12vh 70vh min-content min-content min-content;
   }
 }
 
